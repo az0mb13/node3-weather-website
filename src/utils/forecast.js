@@ -8,7 +8,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.cod === "400") {
             callback('Unable to find location', undefined)
         } else {
-            callback(undefined, 'It is currently ' +body.main.temp + ' degree Celcius in ' +body.name+ '. ' + body.weather[0].description)        }
+            callback(undefined, 'It is currently ' +body.main.temp + ' degree Celcius in ' +body.name+ '. The high today is ' +body.main.temp_max + ' with a low of ' +body.main.temp_min + '. ' + body.weather[0].description)}
     })
 
 }
